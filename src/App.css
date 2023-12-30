@@ -1,0 +1,95 @@
+:root {
+  --shadow-color: 0deg 0% 8%;
+  --shadow-elevation-low: 0.4px 0.5px 1px hsl(var(--shadow-color) / 0),
+    0.7px 0.9px 1.7px hsl(var(--shadow-color) / 0.11),
+    1.2px 1.6px 3px hsl(var(--shadow-color) / 0.22);
+  --shadow-elevation-medium: 0.4px 0.5px 1px hsl(var(--shadow-color) / 0),
+    1.3px 1.7px 3.2px hsl(var(--shadow-color) / 0.06),
+    2.2px 2.9px 5.5px hsl(var(--shadow-color) / 0.11),
+    3.6px 4.9px 9.1px hsl(var(--shadow-color) / 0.17),
+    6.1px 8.2px 15.3px hsl(var(--shadow-color) / 0.22);
+  --shadow-elevation-high: 0.4px 0.5px 1px hsl(var(--shadow-color) / 0),
+    1.9px 2.6px 4.8px hsl(var(--shadow-color) / 0.03),
+    3.2px 4.3px 8px hsl(var(--shadow-color) / 0.05),
+    4.5px 6px 11.3px hsl(var(--shadow-color) / 0.08),
+    5.9px 7.9px 14.8px hsl(var(--shadow-color) / 0.1),
+    7.6px 10.1px 19px hsl(var(--shadow-color) / 0.13),
+    9.7px 13px 24.3px hsl(var(--shadow-color) / 0.16),
+    12.4px 16.7px 31.2px hsl(var(--shadow-color) / 0.18),
+    16px 21.4px 40.1px hsl(var(--shadow-color) / 0.21),
+    20.5px 27.4px 51.3px hsl(var(--shadow-color) / 0.23);
+}
+
+* {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 1.05rem;
+  color: #2b241e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background-book-post {
+  background-image: linear-gradient(
+    0deg,
+    hsl(22deg 23% 52%) 0%,
+    hsl(19deg 38% 51%) 17%,
+    hsl(18deg 40% 68%) 33%,
+    hsl(35deg 51% 93%) 50%,
+    hsl(196deg 1% 88%) 67%,
+    hsl(211deg 14% 77%) 83%,
+    hsl(209deg 15% 59%) 100%
+  );
+}
+
+.book-wrapper {
+  columns: 2;
+  column-gap: 150px;
+  max-width: 64rem;
+  margin: 32px auto;
+  border: 2px solid hsl(35deg 10% 40%);
+  border-radius: 4px;
+  padding: 65px;
+  background: linear-gradient(
+    to right,
+    hsl(35deg, 30%, 90%),
+    hsl(35deg, 30%, 90%) 47%,
+    hsl(35deg, 30%, 70%) 49.5%,
+    hsl(35deg, 20%, 50%) 50%,
+    hsl(35deg, 30%, 70%) 50.5%,
+    hsl(35deg, 30%, 90%) 53%,
+    hsl(35deg, 30%, 90%)
+  );
+
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.book-wrapper p::first-letter {
+  margin-left: 2rem;
+}
+.book-wrapper p {
+  break-inside: avoid;
+  text-align: justify;
+}
+
+p:not(:first-of-type) {
+  text-indent: 2em;
+}
+
+.book-wrapper p:first-of-type {
+  margin: 0;
+  padding: auto;
+}
+
+.first-p:first-of-type::first-letter {
+  font-size: 3em;
+  float: left;
+  line-height: 1em;
+  margin-right: 0.2em;
+}
+
+/* img {
+  float: left;
+} */
